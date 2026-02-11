@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+notebook_env/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build artifacts
+*.o
+*.out
+*.exe
+forced_2_gas
+forced_2_fft
+forced_sweep_2
+
+# Data / logs
+*.csv
+*.log
+
+# OS
+.DS_Store
