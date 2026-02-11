@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+import sys
+import time
+from collections import deque
+
+import matplotlib.pyplot as plt
+
+# Keep last N points on screen
+N = 200
+t = deque(maxlen=N)
+mag1 = deque(maxlen=N)
+mag2 = deque(maxlen=N)
+
+start = time.time()
+
+plt.ion()
+fig = plt.figure()
+ax = fig.add_subplot(111)
+line1, = ax.plot([], [], label="FFT bin 1 mag")
+line2, = ax.plot([], [], label="FFT bin 2 mag")
+ax.set_xlabel("Time (s)")
+ax.set_ylabel("Magnitude")
+ax.legend()
+ax.grid(True)
+
+def update_plot():
+    line1.set_data(t, mag1)
+    line2.set_data(t, mag2)
+    if len(t) >= 2:
+        ax.set_xlim(t[0], t[-1])
+        # autoscale y nicely
+        ymin = min(min(mag1), min(mag2))
+        ymax = max(max(mag1), max(mag2))
+        if ymin == ymax:
+            ymin -= 1.0
+            ymax += 1.0
+        pad = 0.1 * (ymax - ymin)
+        ax.set_ylim(ymin - pad, ymax + pad)
+    fig.canvas.draw()
+    fig.canvas.flush_events()
+
+for line in sys.stdin:
+    line = line.strip()
+    if not line.startswith("FFT,"):
+        continue
+
+    parts = line.split(",")
+    if len(parts) < 4:
+        continue
+
+    try:
+        m1 = float(parts[2])
+        m2 = float(parts[3])
+    except ValueError:
+        continue
+
+    now = time.time() - start
+    t.append(now)
+    mag1.append(m1)
+    mag2.append(m2)
+
+    # update every point
+    update_plot()
