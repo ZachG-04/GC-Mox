@@ -81,7 +81,13 @@ If you see both 76 and 77 are connected then you are good to start using the pro
 <img width="356" height="480" alt="Screen Shot 2026-02-13 at 11 20 14 AM" src="https://github.com/user-attachments/assets/0d94ad6f-c842-431e-8c7f-0ddf3105487d" />
 </p>
 
-Connect the pipes starting from the pump and then splitting betwen the 1st sensor and into the GC Column. The rest of the pipe should go from the end of the GC column to the 2nd sensor.
+Pump → Split → Sensor 1 → GC Column → Sensor 2
+
+**Purpose:**
+
+- Sensor 1 detects injection immediately
+
+- Sensor 2 detects delayed response
 
 # Collecting Data
 
@@ -94,10 +100,12 @@ Next build forced_2_gas.c:
 Now you can collect data:
    - Connect the power source to the pump
    - Change the name of OUT_CSV to what you want to name the CSV file as.
+   - Run python3 plot_2_gas.py
+      - You will be asked to give a label. Set this to background. You can change the label at any time to match the scent you are measuring
    - Wait for the figures to show both the input and output as steady (minimal change in gas resistance)
    - Inject 1ml samples of the gas into the nosel of the pump.
-   - Wait for input and output to settle to a steady state before reinjecting the sample
-   - Finally when all data is collected. Move your CSV file into the data file under forced_mode. This will allow it to run in the notebook      later.
+   - Wait for input and output to settle to a steady state before reinjecting the sample.
+   - Finally when all data is collected. Move your CSV file into the data file under forced_mode. This will allow it to run in the notebook later.
 
 # Open the notebook:
 
@@ -124,7 +132,7 @@ Launch Jupyter:
 
 # Interprating Data
 
-The notebook has data sets preloaded. If you wish to load your own data from scratch delete these. Keep cell 1 to cell 5 as this includes importing libraries, setting global constants and the methods. However it might be worth having a look at the existing data first to understand how the methods are used.
+The notebook has data sets preloaded. If you wish to load your own data from scratch delete these. Keep cell 1 to cell 5 as is, as they include imported libraries, setting global constants and defining functions. However it might be worth having a look at the existing data first to understand how the methods are used.
 
 **Using the methods**
 
@@ -181,6 +189,7 @@ Add new smells here
 <img width="659" height="144" alt="Screen Shot 2026-02-13 at 1 50 50 PM" src="https://github.com/user-attachments/assets/4c2221ab-2b45-46cf-a7b4-c486864689ad" />
 <img width="618" height="458" alt="Screen Shot 2026-02-13 at 1 51 01 PM" src="https://github.com/user-attachments/assets/5eb7bd09-1dbb-46f0-ae67-8cc1c0e8e48e" />
 </p>
+
 
 
 
