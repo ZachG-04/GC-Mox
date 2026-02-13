@@ -128,21 +128,34 @@ The notebook has data sets preloaded. If you wish to load your own data from scr
 
 **Using the methods**
 
-1. Use _load_csv_ to add your new data set to the program. Input the filename and the function will load the csv file and from it return arrays for output times, input times as well as gas resistance inputs and outputs.  
+1. Use _load_csv_ to add your new data set to the program. Input the filename and the function will load the csv file and from it return arrays for output times, input times as well as gas resistance inputs and outputs.
+
+   <img width="511" height="39" alt="Screen Shot 2026-02-13 at 1 48 46 PM" src="https://github.com/user-attachments/assets/fa9f5597-e630-4dbf-8ab4-47f0ce3f2ef7" />
+
 
 2. Next use the _plot_gc_ function to plot the entirety of your dataset. Input the 4 arrays and the function will show you all the peaks of your data.
+   <img width="370" height="45" alt="Screen Shot 2026-02-13 at 1 49 21 PM" src="https://github.com/user-attachments/assets/2da92aef-efae-47d1-9b6c-5182392ca29e" />
 
-3. Use the _plot_gc_ function again, however this time input the arrays followed by two integers and a string for your plot title. (7 input variables)
+   <img width="839" height="546" alt="Screen Shot 2026-02-13 at 1 49 36 PM" src="https://github.com/user-attachments/assets/9b91aa66-00df-436d-8208-05ce82c08286" />
+
+
+
+4. Use the _plot_gc_ function again, however this time input the arrays followed by two integers and a string for your plot title. (7 input variables)
     - The two integers will set a lower and upper time limit for your data. These values should isolate one of your peaks for further evaluation.
+      
+<img width="789" height="598" alt="Screen Shot 2026-02-13 at 1 49 50 PM" src="https://github.com/user-attachments/assets/1ce8a72b-ae72-4042-bd05-e774fc8a1bb4" />
 
-4. Use _get_peak_width_ to get both the width in time of the peak, as well as the time between input and output peaks. Input into the function a lower limit for your input peak, an upper limit for your input peak. As well as the same for your output peak. Finally input a string for the type of smell you are measuring. This will ensure the method adds the data to the appropriate arrays. If you wish to analyze a new smell not listed. Add a new global times and width array, where the other are and edit the method to look for the string of this smell
+5. Use _get_peak_width_ to get both the width in time of the peak, as well as the time between input and output peaks. Input into the function a lower limit for your input peak, an upper limit for your input peak. As well as the same for your output peak. Finally input a string for the type of smell you are measuring. This will ensure the method adds the data to the appropriate arrays. If you wish to analyze a new smell not listed. Add a new global times and width array, where the other are and edit the method to look for the string of this smell
+<img width="352" height="197" alt="Screen Shot 2026-02-13 at 1 49 58 PM" src="https://github.com/user-attachments/assets/16ca27d1-293e-48cc-a762-3f8708e2e4b8" />
 
-5. Repeat Steps 2 to 4 to collect the data from the rest of your peaks. If you wish to add another csv file for the same smell to get more peaks repeat Step 1 as well.
+6. Repeat Steps 2 to 4 to collect the data from the rest of your peaks. If you wish to add another csv file for the same smell to get more peaks repeat Step 1 as well.
 
-6. Now run the distribution method. Input a times or width array for any smell and it will give you the mean, standard deviation as well as plot the probability distribution.
+7. Now run the distribution method. Input a times or width array for any smell and it will give you the mean, standard deviation as well as plot the probability distribution.
+<img width="738" height="627" alt="Screen Shot 2026-02-13 at 1 50 28 PM" src="https://github.com/user-attachments/assets/c9af7d2e-65cf-470e-81b6-314254435ea7" />
 
-7. You can complete these steps for multiple different smells, and compare the datasets.
+8. You can complete these steps for multiple different smells, and compare the datasets.
    - A good block of code for running this data is:  
+
 
 
 
