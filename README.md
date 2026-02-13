@@ -141,7 +141,7 @@ The notebook has data sets preloaded. If you wish to load your own data from scr
 </p>
 
 
-4. Use the _plot_gc_ function again, however this time input the arrays followed by two integers and a string for your plot title. (7 input variables)
+3. Use the _plot_gc_ function again, however this time input the arrays followed by two integers and a string for your plot title. (7 input variables)
     - The two integers will set a lower and upper time limit for your data. These values should isolate one of your peaks for further evaluation.
     - 
 <p align="center">  
@@ -152,23 +152,36 @@ The notebook has data sets preloaded. If you wish to load your own data from scr
 4. Use _get_peak_width_ to get both the width in time of the peak, as well as the time between input and output peaks. Input into the function a lower limit for your input peak, an upper limit for your input peak. As well as the same for your output peak. Finally input a string for the type of smell you are measuring. This will ensure the method adds the data to the appropriate arrays. If you wish to analyze a new smell not listed. Add a new global times and width array, where the other are and edit the method to look for the string of this smell.
    
 <p align="center">
+
 <img width="352" height="197" alt="Screen Shot 2026-02-13 at 1 49 58 PM" src="https://github.com/user-attachments/assets/16ca27d1-293e-48cc-a762-3f8708e2e4b8" />
 
-  
 </p>
 
-6. Repeat Steps 2 to 4 to collect the data from the rest of your peaks. If you wish to add another csv file for the same smell to get more peaks repeat Step 1 as well.
+<p align="center">
+Output of get_peak_width
+</p>
 
-7. Now run the distribution method. Input a times or width array for any smell and it will give you the mean, standard deviation as well as plot the probability distribution.
+<p align="center">
+<img width="300" height="282" alt="Screen Shot 2026-02-13 at 2 03 06 PM" src="https://github.com/user-attachments/assets/cc08d672-d4a4-489f-96f9-5a95f511ee15" />
+</p>
+
+<p align="center">
+Add new smells here
+</p>
+
+5. Repeat Steps 2 to 4 to collect the data from the rest of your peaks. If you wish to add another csv file for the same smell to get more peaks repeat Step 1 as well.
+
+6. Now run the distribution method. Input a times or width array for any smell and it will give you the mean, standard deviation as well as plot the probability distribution.
 <p align="center">
 <img width="738" height="627" alt="Screen Shot 2026-02-13 at 1 50 28 PM" src="https://github.com/user-attachments/assets/c9af7d2e-65cf-470e-81b6-314254435ea7" />
 </p>
-6. You can complete these steps for multiple different smells, and compare the datasets.
+7. You can complete these steps for multiple different smells, and compare the datasets.
    - A good block of code for running this data is:  
 <p align="center">
 <img width="659" height="144" alt="Screen Shot 2026-02-13 at 1 50 50 PM" src="https://github.com/user-attachments/assets/4c2221ab-2b45-46cf-a7b4-c486864689ad" />
 <img width="618" height="458" alt="Screen Shot 2026-02-13 at 1 51 01 PM" src="https://github.com/user-attachments/assets/5eb7bd09-1dbb-46f0-ae67-8cc1c0e8e48e" />
 </p>
+
 
 
 
