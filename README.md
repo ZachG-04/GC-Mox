@@ -1,5 +1,11 @@
 # GC-MOX Dual Sensor System
 
+<p align="center">
+<img width="359" height="255" alt="Screen Shot 2026-02-13 at 1 27 36 PM" src="https://github.com/user-attachments/assets/0583f9c6-6d1c-4b81-82c1-000f88b9f900" />
+</p>
+
+
+
 Raw Gas Resistance Mode (Forced Mode, Single Temperature)
 
 A dual Bosch BME690 MOX gas sensor system running in forced mode at a constant heater temperature, designed for:
@@ -137,6 +143,7 @@ The notebook has data sets preloaded. If you wish to load your own data from scr
 
 7. You can complete these steps for multiple different smells, and compare the datasets.
    - A good block of code for running this data is:  
+
 
 
 
